@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".Fragment.CartFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/cartprogressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Cartrec" />
+
+    <LinearLayout
+        android:id="@+id/linerar1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/Flipkart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_margin="6dp"
+            android:fontFamily="@font/baloo_tammudu"
+            android:text=" JpMarket "
+            android:textColor="@color/white"
+            android:textSize="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_baseline_shopping_cart_24"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/linerar1" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="7dp"
+        android:backgroundTint="@color/white"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roobot"
+                android:text="Period"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Time1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roobot"
+                android:text="0000/00/00"
+                android:textColor="@color/Flipkart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView12"
+                app:layout_constraintTop_toBottomOf="@+id/textView12"
+                app:layout_constraintVertical_bias="0.583" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="15dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="5dp"
+                android:background="@color/Flipkart"
+                app:layout_constraintBottom_toBottomOf="@+id/Time1"
+                app:layout_constraintStart_toEndOf="@+id/Time1"
+                app:layout_constraintTop_toTopOf="@+id/Time1" />
+
+            <TextView
+                android:id="@+id/time2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roobot"
+                android:text="0000/00/00"
+                android:textColor="@color/Flipkart"
+                android:layout_marginStart="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/view5"
+                app:layout_constraintTop_toTopOf="@+id/Time1"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:paddingStart="6dp"
+                android:src="@drawable/black"
+                android:foregroundGravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/time2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/calendar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingStart="6dp"
+                android:src="@drawable/calendar1"
+                android:foregroundGravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/time2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Cartrec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    android:layout_margin="9dp">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageViewCover"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+
+        android:src="@drawable/ic_baseline_supervised_user_circle_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewCover"
+        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintStart_toStartOf="@+id/imageViewCover"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCover">
+
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:singleLine="false"
+            android:text="Title: "
+            android:layout_marginTop="7dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_baseline_star_24"
+            app:layout_constraintBottom_toBottomOf="@+id/Rating"
+            app:layout_constraintEnd_toStartOf="@+id/Rating"
+            app:layout_constraintTop_toTopOf="@+id/Rating" />
+
+        <TextView
+            android:id="@+id/Rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:text="Rating: "
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/tvTitle"
+            app:layout_constraintStart_toEndOf="@+id/textViewPrice"
+            app:layout_constraintTop_toTopOf="@+id/textViewPrice" />
+
+
+        <TextView
+            android:id="@+id/textViewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Price"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="5.0"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.429"
+            app:layout_constraintStart_toEndOf="@+id/textViewCategory"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.901" />
+
+        <TextView
+            android:id="@+id/textViewCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="10:00 - 23:00"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
